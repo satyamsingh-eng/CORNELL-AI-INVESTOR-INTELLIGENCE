@@ -133,6 +133,19 @@ h2{letter-spacing:-.015em}
 .legend .li{font-size:11px}
 .legend .lt{font-size:10.5px}
 .plink{font-size:11.5px;color:var(--accent2);font-weight:600;margin-left:4px;text-decoration:none}
+/* Contact actions: short, tactile controls instead of raw URLs */
+.email-link{color:var(--accent2);text-decoration:none;word-break:break-word}
+.email-link:hover,.email-link:focus{color:#8ec5ff;text-decoration:underline}
+.contact-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.contact-action{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:0 11px;border:1px solid #2d5f91;border-radius:6px;color:#8ec5ff;font-size:12px;font-weight:650;text-decoration:none;white-space:nowrap;background:#111923}
+.contact-action:hover,.contact-action:focus{background:#17283a;color:#f5f5f7;border-color:#4da3ff;outline:2px solid transparent}
+.pgrid{grid-template-columns:repeat(4,minmax(0,1fr));column-gap:20px}
+.pgrid .contact-block,.pgrid .f:last-child{grid-column:span 2}
+.map-start{display:flex;align-items:center;justify-content:space-between;gap:20px;background:var(--panel2);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:10px;padding:16px 18px;margin:18px 0}
+.map-start>div:first-child{display:grid;gap:4px}.map-start strong{font-size:15px}.map-start span:not(.map-kicker){color:var(--muted);font-size:13px}.map-kicker{color:var(--accent2);font-size:10px;font-weight:700;letter-spacing:.1em}.map-start-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.map-wrap{overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--panel);margin:16px 0}.map-wrap svg{display:block;min-width:800px}.map-potential{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:14px 0 2px;color:var(--muted);font-size:13px}.map-potential>div{padding-right:14px;border-right:1px solid var(--border)}.map-potential>div:last-of-type{border-right:0}.map-evidence{margin-top:16px}
+.board-summary{max-width:900px;margin:0 0 12px;color:var(--muted)}.board-method,.watchlist{max-width:980px;background:var(--panel2);border:1px solid var(--border);border-radius:8px;margin:10px 0 18px}.board-method summary,.watchlist summary{color:var(--accent2);font-size:12px;font-weight:650;padding:12px 14px;cursor:pointer}.board-method p,.watchlist p{margin:0;padding:0 14px 14px;color:var(--muted);font-size:13px;line-height:1.55}
+@media(max-width:1040px){.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pgrid .contact-block,.pgrid .f:last-child{grid-column:span 1}.map-start{align-items:flex-start;flex-direction:column}.map-start-actions{justify-content:flex-start}}
+@media(max-width:640px){.pgrid{grid-template-columns:1fr}.pgrid .contact-block,.pgrid .f:last-child{grid-column:span 1}.contact-actions{gap:6px}.contact-action{min-height:40px;font-size:13px}.map-potential{align-items:flex-start;flex-direction:column}.map-potential>div{border-right:0;padding-right:0}nav{overflow-x:auto;white-space:nowrap;gap:14px;padding-left:18px;padding-right:18px}nav::-webkit-scrollbar{display:none}}
 </style>
 </head>
 <body>
@@ -183,8 +196,8 @@ h2{letter-spacing:-.015em}
 <div class="secnum">02 · TOP 10 PEOPLE TO BUILD RELATIONSHIPS WITH</div>
 <h2>Executive Action Board</h2>
 <div class="tldr">Start with Shulman — he opens the doors. Then the capital: Wolfe (Lux), Das (Menlo), Rosenbloom (FC), Holiday (645). Then the thesis emails: Sim, Svrluga, Schoen, Nichols, Fleming. <b>Every card is email-ready.</b></div>
-<p>Ranked by strategic value: verified Cornell connection × decision authority × relationship access. Four rules govern this board: <b>(1)</b> Authority labels fix the seniority problem — a famous Cornell figure with no deal authority ranks below a principal who actually sources checks. <b>(2)</b> Only verified contact routes are clickable — everything else says so. <b>(3)</b> #1 is the network key, not a capital target: Shulman opens the doors the other nine walk through. <b>(4) RULE 1 — contact gate:</b> a person stays on this board only with BOTH a verified LinkedIn AND a confirmed email. Anyone failing the gate was removed or replaced — not left half-verified.</p>
-<p><b>How to read a card:</b> the top row = who and how we classify their Cornell tie; the grid = degree, role, authority, focus, stage, investments; the bottom row = access path, verified contact, confidence; the final line = the exact next action. Everything needed to draft the first email is on the card.</p>
+<p class="board-summary"><b>Board rule:</b> every person below has a verified LinkedIn and confirmed email. Rank rewards decision authority, active AI seed fit, Cornell relevance, and usable access — not fame.</p>
+<details class="board-method"><summary>How this board is ranked and how to read a card</summary><p>Authority labels separate the person who can make or influence an investment decision from a senior but inaccessible figure. Each card contains the Cornell proof, current investment role, AI evidence, stage, contact actions, confidence, and one practical next move. Rule 1 applies throughout: no verified LinkedIn plus confirmed email, no place on the action board.</p></details>
 
 <div class="pcard">
 <div class="phead"><span class="prank">#1</span><span class="pname">Zach Shulman</span><span class="pfirm">Cayuga Venture Fund · Cornell University</span><span class="b bv">NETWORK KEY</span></div>
@@ -196,7 +209,16 @@ h2{letter-spacing:-.015em}
 <div class="f">AI focus<div class="v">Cornell spinouts, upstate NY tech (not AI-exclusive)</div></div>
 <div class="f">Stage / check<div class="v">Seed–A · $250K–1.5M</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bA">DIRECT — verified</span> · public Cornell directory</div></div>
-<div class="f">Contact<div class="v">z<a href="mailto:js2@cornell.edu">js2@cornell.edu</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.<a href="https://www.linkedin.com/in/zachshulman" target="_blank" rel="noopener">linkedin.com/in/zachshulman</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/zachshulman" target="_blank" rel="noopener">linkedin.com/in/zachshulman</a></a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:zjs2@cornell.edu">zjs2@cornell.edu</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:zjs2@cornell.edu">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/zachshulman" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Email this week. Ask for 2–3 introductions into Red Bear / BRV / 645 — not for capital. He is the switchboard that turns cold into warm.</p>
@@ -213,7 +235,17 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Seed–B · $1M–5M seed</div></div>
 <div class="f">AI investments<div class="v">Sakana AI · Physical Intelligence · Together AI · Hugging Face</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bD">POTENTIAL</span> — CALS/ILR alumni office</div></div>
-<div class="f">Contact<div class="v">j<a href="mailto:osh.wolfe@luxcapital.com">osh.wolfe@luxcapital.com</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.linkedin.com/in/josh-wolfe-7883" target="_blank" rel="noopener">linkedin.com/in/josh-wolfe-7883</a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:josh.wolfe@luxcapital.com">josh.wolfe@luxcapital.com</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:josh.wolfe@luxcapital.com">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/josh-wolfe-7883" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://www.luxcapital.com" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Warm via CALS alumni office, then a thesis email referencing Sakana AI / agentic infrastructure — one page, no deck.</p>
@@ -230,7 +262,17 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Seed–B · $500K–5M</div></div>
 <div class="f">AI investments<div class="v">Anthropic Anthology portfolio · OpenRouter</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bD">POTENTIAL</span> — Cornell CS alumni</div></div>
-<div class="f">Contact<div class="v">d<a href="mailto:as@menlovc.com">as@menlovc.com</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.linkedin.com/in/debarghyadas" target="_blank" rel="noopener">linkedin.com/in/debarghyadas</a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:das@menlovc.com">das@menlovc.com</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:das@menlovc.com">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/debarghyadas" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://menlovc.com" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Position SARVAX as an enterprise agent-deployment story (wealth-management workflows). Cornell CS line opens the email.</p>
@@ -247,7 +289,17 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Pre-seed–Seed · $500K–2M</div></div>
 <div class="f">AI investments<div class="v">Verkada · seed AI portfolio</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bA">DIRECT</span> — he teaches the VC class at Cornell Tech</div></div>
-<div class="f">Contact<div class="v">m<a href="mailto:icah@foundercollective.com">icah@foundercollective.com</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.linkedin.com/in/micah-rosenbloom-a0350" target="_blank" rel="noopener">linkedin.com/in/micah-rosenbloom-a0350</a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:micah@foundercollective.com">micah@foundercollective.com</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:micah@foundercollective.com">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/micah-rosenbloom-a0350" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://www.foundercollective.com" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Concise Cornell-led note. He literally teaches founders how to pitch VCs — the audience is as warm as it gets.</p>
@@ -264,7 +316,17 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Seed–A · $500K–2M</div></div>
 <div class="f">AI investments<div class="v">Shift Technology · FiscalNote · Panther</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bA">DIRECT</span> — Cornell Tech board + Shulman's network</div></div>
-<div class="f">Contact<div class="v">a<a href="mailto:aron@645ventures.com">aron@645ventures.com</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.linkedin.com/in/aholidayiii" target="_blank" rel="noopener">linkedin.com/in/aholidayiii</a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:aaron@645ventures.com">aaron@645ventures.com</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:aaron@645ventures.com">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/aholidayiii" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://645ventures.com" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Request the Shulman introduction. Purest Cornell-to-VC line in the entire map.</p>
@@ -281,7 +343,17 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Inception–A · $500K–5M</div></div>
 <div class="f">AI investments<div class="v">Modular · Agentuity · Surf AI · BigID</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bD">POTENTIAL</span> — Dyson alumni office</div></div>
-<div class="f">Contact<div class="v">e<a href="mailto:d@boldstart.vc">d@boldstart.vc</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.<a href="https://www.linkedin.com/in/edsim" target="_blank" rel="noopener">linkedin.com/in/edsim</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/edsim" target="_blank" rel="noopener">linkedin.com/in/edsim</a></a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:ed@boldstart.vc">ed@boldstart.vc</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:ed@boldstart.vc">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/edsim" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://boldstart.vc" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Send the agent-runtime one-pager. Boldstart is the exact stage + thesis match for SARVAX.</p>
@@ -298,7 +370,17 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Pre-seed–A · $100K–10M</div></div>
 <div class="f">AI investments<div class="v">Etched · LlamaIndex · Knostic · Cake AI</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bD">POTENTIAL</span> — Cornell Tech speaker circuit</div></div>
-<div class="f">Contact<div class="v">b<a href="mailto:rad@primary.vc">rad@primary.vc</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.<a href="https://www.linkedin.com/in/bradsvrluga" target="_blank" rel="noopener">linkedin.com/in/bradsvrluga</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/bradsvrluga" target="_blank" rel="noopener">linkedin.com/in/bradsvrluga</a></a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:brad@primary.vc">brad@primary.vc</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:brad@primary.vc">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/bradsvrluga" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://www.primary.vc" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Warm via Cornell Tech events. Cornell is his stated mission — lead with it.</p>
@@ -315,7 +397,17 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Pre-seed–A · $250K–10M</div></div>
 <div class="f">AI investments<div class="v">TensorZero · Gradium · Tycho AI</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bD">POTENTIAL</span> — Dyson alumni (same school)</div></div>
-<div class="f">Contact<div class="v">d<a href="mailto:ez@firstmark.com">ez@firstmark.com</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.<a href="https://www.linkedin.com/in/desmond-fleming-b84042100" target="_blank" rel="noopener">linkedin.com/in/desmond-fleming-b84042100</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/desmond-fleming-b84042100" target="_blank" rel="noopener">linkedin.com/in/desmond-fleming-b84042100</a></a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:dez@firstmark.com">dez@firstmark.com</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:dez@firstmark.com">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/desmond-fleming-b84042100" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://firstmarkcap.com" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Thesis email — principals respond; reference the Dyson shared school in line one.</p>
@@ -332,7 +424,17 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Seed–C · $1M–10M</div></div>
 <div class="f">AI investments<div class="v">P-1 AI + enterprise AI portfolio</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bA">DIRECT</span> — the VC Club he founded is the documented route</div></div>
-<div class="f">Contact<div class="v">a<a href="mailto:schoen@nea.com">schoen@nea.com</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.linkedin.com/in/andrewaschoen" target="_blank" rel="noopener">linkedin.com/in/andrewaschoen</a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:aschoen@nea.com">aschoen@nea.com</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:aschoen@nea.com">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/andrewaschoen" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://www.nea.com" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Relationship-first note referencing the VC Club. He built the Cornell-to-VC pipeline — use it.</p>
@@ -349,13 +451,23 @@ h2{letter-spacing:-.015em}
 <div class="f">Stage / check<div class="v">Pre-seed–A · $1M–2M</div></div>
 <div class="f">AI investments<div class="v">26+ AI companies · Cypher AI · Autoscience · Fable</div></div>
 <div class="f">Relationship path<div class="v"><span class="b bD">POTENTIAL</span> — Johnson alumni</div></div>
-<div class="f">Contact<div class="v">m<a href="mailto:arlon@macventurecapital.com">arlon@macventurecapital.com</a> · <span class="b bok">APOLLO VERIFIED</span> · <a href="https://www.linkedin.com/in/marloncnichols" target="_blank" rel="noopener">linkedin.com/in/marloncnichols</a></div></div>
+<div class="f contact-block">Contact
+  <div class="v">
+    <a class="email-link" href="mailto:marlon@macventurecapital.com">marlon@macventurecapital.com</a>
+    <span class="b bok">APOLLO VERIFIED</span>
+    <div class="contact-actions">
+      <a class="contact-action" href="mailto:marlon@macventurecapital.com">Email ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/marloncnichols" target="_blank" rel="noopener">LinkedIn ↗</a>
+    
+      <a class="contact-action" href="https://macventurecapital.com" target="_blank" rel="noopener">Firm ↗</a></div>
+  </div>
+</div>
 <div class="f">Confidence<div class="v"><span class="b bok">CONFIRMED</span></div></div>
 </div>
 <p><b>Next action:</b> Johnson-alumni-led note; cite his AI/ML portfolio category, not just "AI".</p>
 </div>
 
-<p class="small" style="color:var(--dim)">Next in rank (#11–13): John Megrue Jr. (Radical — <span class="b bD">INFLUENCER</span>, verified contact; email domain oddity noted) · Jenny Fielding (Everywhere — verified, DIRECT access via Cornell Tech Studio) · Rebecca Mitchem (Neotribe — verified contact, <span class="b bop">OPERATIONAL</span>, authority to verify). <b>Removed under Rule 1</b> (missing verified LinkedIn or confirmed email): Morgan Beller (no verified email — LinkedIn-only), Doug Leone (no direct route — firm-level long game only).</p>
+<details class="watchlist"><summary>Watchlist — not on the action board</summary><p><b>John Megrue Jr.</b> (Radical) is an INFLUENCER with a verified contact but a domain oddity. <b>Jenny Fielding</b> (Everywhere) has direct Cornell Tech access. <b>Rebecca Mitchem</b> (Neotribe) has a verified contact but authority still needs checking. <b>Excluded by Rule 1:</b> Morgan Beller (no verified email) and Doug Leone (no direct route).</p></details>
 </section>
 </div>
 <div class="wrap">
@@ -449,151 +561,121 @@ h2{letter-spacing:-.015em}
 <div class="tldr">Fifteen rule-1-compliant contacts — every email and LinkedIn here is verified and clickable. <b>Warm-first protocol applies: no cold email before the Cornell-intro step is tried.</b></div>
 <p>Three statuses exist, nothing else: <b>APOLLO VERIFIED</b> (Apollo enrichment returned email_status=verified), <b>PUBLIC ROUTE</b> (posted on fund/university site), <b>NOT FOUND</b>. Zero pattern-guessed emails. Sales Navigator: not available in this environment — documented, not hidden.</p>
 <div class="callout"><b>Contact protocol:</b> (1) Warm before cold — no email goes out until the Cornell-introduction step (section 04) has been attempted for that person. (2) Every opener carries the Cornell line in sentence one — it is the permission structure of this network. (3) One thread per person — no double emails, no multi-channel blasts. (4) Cold emails go only to APOLLO VERIFIED or PUBLIC ROUTE inboxes, and always to ONE person at a firm (start at the authority badge's level). (5) LinkedIn links open in a new tab; where a handle didn't resolve, the label says so instead of a dead link. <b>(6) RULE 1 — contact gate:</b> a person appears on this register only with BOTH a verified LinkedIn AND a confirmed email; failures (Beller — no verified email, Leone — no direct route) were removed and are tracked in research gaps until enrichment succeeds.</div>
-<div class="twrap"><table>
-<tr><th>Person</th><th>Firm</th><th>Role</th><th>Email</th><th>Verification</th><th>LinkedIn</th><th>Location</th><th>Contact confidence</th></tr>
-<tr><td>Zach Shulman</td><td>Cayuga / Cornell</td><td>MD; Dir Entrepreneurship</td><td>z<a href="mailto:js2@cornell.edu">js2@cornell.edu</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.<a href="https://www.linkedin.com/in/zachshulman" target="_blank" rel="noopener">linkedin.com/in/zachshulman</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/zachshulman" target="_blank" rel="noopener">linkedin.com/in/zachshulman</a></a></td><td>Ithaca, NY</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Josh Wolfe</td><td>Lux</td><td>Co-Founder &amp; MP</td><td>j<a href="mailto:osh.wolfe@luxcapital.com">osh.wolfe@luxcapital.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.linkedin.com/in/josh-wolfe-7883" target="_blank" rel="noopener">linkedin.com/in/josh-wolfe-7883</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Deedy Das</td><td>Menlo</td><td>Partner</td><td>d<a href="mailto:as@menlovc.com">as@menlovc.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.linkedin.com/in/debarghyadas" target="_blank" rel="noopener">linkedin.com/in/debarghyadas</a></td><td>Palo Alto</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Andrew Schoen</td><td>NEA</td><td>Partner</td><td>a<a href="mailto:schoen@nea.com">schoen@nea.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.linkedin.com/in/andrewaschoen" target="_blank" rel="noopener">linkedin.com/in/andrewaschoen</a></td><td>Denver</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Micah Rosenbloom</td><td>Founder Collective</td><td>Managing Partner</td><td>m<a href="mailto:icah@foundercollective.com">icah@foundercollective.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.linkedin.com/in/micah-rosenbloom-a0350" target="_blank" rel="noopener">linkedin.com/in/micah-rosenbloom-a0350</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Dez Fleming</td><td>FirstMark</td><td>Principal</td><td>d<a href="mailto:ez@firstmark.com">ez@firstmark.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.<a href="https://www.linkedin.com/in/desmond-fleming-b84042100" target="_blank" rel="noopener">linkedin.com/in/desmond-fleming-b84042100</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/desmond-fleming-b84042100" target="_blank" rel="noopener">linkedin.com/in/desmond-fleming-b84042100</a></a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Aaron Holiday</td><td>645</td><td>Co-Founder &amp; MP</td><td>a<a href="mailto:aron@645ventures.com">aron@645ventures.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.linkedin.com/in/aholidayiii" target="_blank" rel="noopener">linkedin.com/in/aholidayiii</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Marlon Nichols</td><td>MaC</td><td>Co-Founder &amp; MGP</td><td>m<a href="mailto:arlon@macventurecapital.com">arlon@macventurecapital.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.linkedin.com/in/marloncnichols" target="_blank" rel="noopener">linkedin.com/in/marloncnichols</a></td><td>Los Angeles</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Rebecca Mitchem</td><td>Neotribe</td><td>Partner &amp; COO</td><td>r<a href="mailto:ebecca@neotribe.vc">ebecca@neotribe.vc</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.linkedin.com/in/rebecca-mitchem-cfa-79231aa" target="_blank" rel="noopener">linkedin.com/in/rebecca-mitchem-cfa-79231aa</a></td><td>New York</td><td><span class="b blk">MEDIUM</span> (authority unverified)</td></tr>
-<tr><td>Jenny Fielding</td><td>Everywhere</td><td>Co-Founder &amp; GP</td><td>j@everywhere.vc</td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.linkedin.com/in/jennyfielding" target="_blank" rel="noopener">linkedin.com/in/jennyfielding</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Renaud Visage</td><td>Point Nine</td><td>GP / Co-Founder</td><td>r<a href="mailto:enaud@slate.vc">enaud@slate.vc</a></td><td><span class="b blk">APOLLO — DOMAIN MISMATCH</span> (slate.vc ≠ pointnine.com — verify current seat)</td><td><a href="https://www.<a href="https://www.linkedin.com/in/renaudvisage" target="_blank" rel="noopener">linkedin.com/in/renaudvisage</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/renaudvisage" target="_blank" rel="noopener">linkedin.com/in/renaudvisage</a></a></td><td>Paris</td><td><span class="b blk">MEDIUM</span></td></tr>
-<tr><td>Ron Hose</td><td>Wavemaker</td><td>Venture Partner (cell) / Independent Director (Apollo)</td><td>r<a href="mailto:on@ronhose.com">on@ronhose.com</a></td><td><span class="b bok">APOLLO VERIFIED</span> — title conflict flagged</td><td><a href="https://www.linkedin.com/in/ronhose" target="_blank" rel="noopener">linkedin.com/in/ronhose</a></td><td>US</td><td><span class="b blk">MEDIUM</span></td></tr>
-<tr><td>John Megrue Jr.</td><td>Radical</td><td>Vice Chairman &amp; Partner</td><td>j<a href="mailto:ohn@brightonhealth.com">ohn@brightonhealth.com</a></td><td><span class="b bok">APOLLO VERIFIED</span> — domain oddity noted</td><td><a href="https://www.<a href="https://www.linkedin.com/in/john-megrue-5a26051bb" target="_blank" rel="noopener">linkedin.com/in/john-megrue-5a26051bb</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/john-megrue-5a26051bb" target="_blank" rel="noopener">linkedin.com/in/john-megrue-5a26051bb</a></a></td><td>Norwalk, CT</td><td><span class="b blk">MEDIUM</span></td></tr>
-<tr><td>Ed Sim</td><td>Boldstart</td><td>Founder &amp; GP</td><td>e<a href="mailto:d@boldstart.vc">d@boldstart.vc</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.<a href="https://www.linkedin.com/in/edsim" target="_blank" rel="noopener">linkedin.com/in/edsim</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/edsim" target="_blank" rel="noopener">linkedin.com/in/edsim</a></a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
-<tr><td>Brad Svrluga</td><td>Primary</td><td>Co-Founder &amp; MP</td><td>b<a href="mailto:rad@primary.vc">rad@primary.vc</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a href="https://www.<a href="https://www.linkedin.com/in/bradsvrluga" target="_blank" rel="noopener">linkedin.com/in/bradsvrluga</a>" target="_blank" rel="noopener"><a href="https://www.linkedin.com/in/bradsvrluga" target="_blank" rel="noopener">linkedin.com/in/bradsvrluga</a></a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
+<div class="twrap"><table class="contact-table">
+<tr><th>Person</th><th>Firm</th><th>Role</th><th>Contact</th><th>Verification</th><th>LinkedIn</th><th>Location</th><th>Confidence</th></tr>
+<tr><td>Zach Shulman</td><td>Cayuga / Cornell</td><td>MD; Dir Entrepreneurship</td><td><a class="email-link" href="mailto:zjs2@cornell.edu">zjs2@cornell.edu</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/zachshulman" target="_blank" rel="noopener">Open ↗</a></td><td>Ithaca, NY</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Josh Wolfe</td><td>Lux</td><td>Co-Founder & MP</td><td><a class="email-link" href="mailto:josh.wolfe@luxcapital.com">josh.wolfe@luxcapital.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/josh-wolfe-7883" target="_blank" rel="noopener">Open ↗</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Deedy Das</td><td>Menlo</td><td>Partner</td><td><a class="email-link" href="mailto:das@menlovc.com">das@menlovc.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/debarghyadas" target="_blank" rel="noopener">Open ↗</a></td><td>Palo Alto</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Andrew Schoen</td><td>NEA</td><td>Partner</td><td><a class="email-link" href="mailto:aschoen@nea.com">aschoen@nea.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/andrewaschoen" target="_blank" rel="noopener">Open ↗</a></td><td>Denver</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Micah Rosenbloom</td><td>Founder Collective</td><td>Managing Partner</td><td><a class="email-link" href="mailto:micah@foundercollective.com">micah@foundercollective.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/micah-rosenbloom-a0350" target="_blank" rel="noopener">Open ↗</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Dez Fleming</td><td>FirstMark</td><td>Principal</td><td><a class="email-link" href="mailto:dez@firstmark.com">dez@firstmark.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/desmond-fleming-b84042100" target="_blank" rel="noopener">Open ↗</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Aaron Holiday</td><td>645</td><td>Co-Founder & MP</td><td><a class="email-link" href="mailto:aaron@645ventures.com">aaron@645ventures.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/aholidayiii" target="_blank" rel="noopener">Open ↗</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Marlon Nichols</td><td>MaC</td><td>Co-Founder & MGP</td><td><a class="email-link" href="mailto:marlon@macventurecapital.com">marlon@macventurecapital.com</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/marloncnichols" target="_blank" rel="noopener">Open ↗</a></td><td>Los Angeles</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Rebecca Mitchem</td><td>Neotribe</td><td>Partner & COO</td><td><a class="email-link" href="mailto:rebecca@neotribe.vc">rebecca@neotribe.vc</a></td><td><span class="b blk">APOLLO VERIFIED — authority unverified</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/rebecca-mitchem-cfa-79231aa" target="_blank" rel="noopener">Open ↗</a></td><td>New York</td><td><span class="b blk">MEDIUM</span></td></tr>
+<tr><td>Jenny Fielding</td><td>Everywhere</td><td>Co-Founder & GP</td><td><a class="email-link" href="mailto:j@everywhere.vc">j@everywhere.vc</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/jennyfielding" target="_blank" rel="noopener">Open ↗</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Renaud Visage</td><td>Point Nine</td><td>GP / Co-Founder</td><td><a class="email-link" href="mailto:renaud@slate.vc">renaud@slate.vc</a></td><td><span class="b blk">APOLLO — domain mismatch; verify current seat</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/renaudvisage" target="_blank" rel="noopener">Open ↗</a></td><td>Paris</td><td><span class="b blk">MEDIUM</span></td></tr>
+<tr><td>Ron Hose</td><td>Wavemaker</td><td>Venture Partner / Apollo title conflict</td><td><a class="email-link" href="mailto:ron@ronhose.com">ron@ronhose.com</a></td><td><span class="b blk">APOLLO VERIFIED — title conflict</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/ronhose" target="_blank" rel="noopener">Open ↗</a></td><td>US</td><td><span class="b blk">MEDIUM</span></td></tr>
+<tr><td>John Megrue Jr.</td><td>Radical</td><td>Vice Chairman & Partner</td><td><a class="email-link" href="mailto:john@brightonhealth.com">john@brightonhealth.com</a></td><td><span class="b blk">APOLLO VERIFIED — domain oddity</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/john-megrue-5a26051bb" target="_blank" rel="noopener">Open ↗</a></td><td>Norwalk, CT</td><td><span class="b blk">MEDIUM</span></td></tr>
+<tr><td>Ed Sim</td><td>Boldstart</td><td>Founder & GP</td><td><a class="email-link" href="mailto:ed@boldstart.vc">ed@boldstart.vc</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/edsim" target="_blank" rel="noopener">Open ↗</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
+<tr><td>Brad Svrluga</td><td>Primary</td><td>Co-Founder & MP</td><td><a class="email-link" href="mailto:brad@primary.vc">brad@primary.vc</a></td><td><span class="b bok">APOLLO VERIFIED</span></td><td><a class="contact-action" href="https://www.linkedin.com/in/bradsvrluga" target="_blank" rel="noopener">Open ↗</a></td><td>New York</td><td><span class="b bok">HIGH</span></td></tr>
 </table></div>
 </section>
 
 <section id="relmap">
-<div class="secnum">07 · RELATIONSHIP MAP</div>
-<h2>Cornell → Investor → Decision-Maker → Capital</h2>
-<div class="tldr">Green lines are verified doors — use them. Dashed lines are unconfirmed channels — plan around them. Amber pills are authority-corrected people.</div>
-<p>Read it top to bottom: <b>Cornell</b> (the relationship asset) feeds the <b>ecosystem layer</b> (verified doors), which opens into <b>investor firms</b>, then into <b>named decision-makers</b> (green = LEAD/DECISION-MAKER, blue = INVESTMENT PRO, amber = OPERATIONAL/INFLUENCER, gray = long-game), then into the <b>AI deals that prove the thesis</b>. <b>Solid green = verified relationship/employment. Dashed gray = potential, not confirmed.</b> All lines are routed in the gutters between columns — none pass through a box.</p>
-<svg viewBox="0 0 1120 640" width="100%" role="img" aria-label="Relationship map in five layers: Cornell University feeds the ecosystem network, which opens into investor firms, then named decision-makers, then AI portfolio deals. Solid edges are verified, dashed edges are potential." style="background:var(--panel);border:1px solid var(--border);border-radius:12px">
-<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9a9aa2"/></marker></defs>
-<!-- L1 -->
-<rect x="140" y="20" width="280" height="44" rx="8" fill="#111114" stroke="#0071e3"/>
-<text x="280" y="38" fill="#4da3ff" font-size="13" font-weight="700" text-anchor="middle">CORNELL UNIVERSITY</text>
-<text x="280" y="53" fill="#9a9aa2" font-size="10" text-anchor="middle">the relationship asset</text>
-<rect x="700" y="20" width="280" height="44" rx="8" fill="#0071e3" opacity=".14" stroke="#0071e3"/>
-<text x="840" y="38" fill="#4da3ff" font-size="13" font-weight="700" text-anchor="middle">C3A LABS · SARVAX</text>
-<text x="840" y="53" fill="#9a9aa2" font-size="10" text-anchor="middle">we contact the ecosystem · start: Shulman</text>
-<!-- L2 -->
-<g font-size="11">
-<rect x="20" y="120" width="200" height="44" rx="8" fill="#111114" stroke="#32d74b"/>
-<text x="120" y="138" fill="#32d74b" font-weight="600" text-anchor="middle">Zach Shulman</text>
-<text x="120" y="153" fill="#9a9aa2" font-size="9.5" text-anchor="middle">network key · email verified</text>
-<rect x="240" y="120" width="200" height="44" rx="8" fill="#111114" stroke="#32d74b"/>
-<text x="340" y="138" fill="#32d74b" font-weight="600" text-anchor="middle">Cornell VC Club</text>
-<text x="340" y="153" fill="#9a9aa2" font-size="9.5" text-anchor="middle">founded by Schoen (NEA)</text>
-<rect x="460" y="120" width="200" height="44" rx="8" fill="#111114" stroke="#32d74b"/>
-<text x="560" y="138" fill="#32d74b" font-weight="600" text-anchor="middle">Cornell Tech Studio</text>
-<text x="560" y="153" fill="#9a9aa2" font-size="9.5" text-anchor="middle">Tisch · Fielding · Schechter</text>
-<rect x="680" y="120" width="200" height="44" rx="8" fill="#111114" stroke="#32d74b"/>
-<text x="780" y="138" fill="#32d74b" font-weight="600" text-anchor="middle">Red Bear Angels</text>
-<text x="780" y="153" fill="#9a9aa2" font-size="9.5" text-anchor="middle">Stoller '93 · Warren '94</text>
-<rect x="900" y="120" width="200" height="44" rx="8" fill="#111114" stroke="#ff9f0a" stroke-dasharray="4 3"/>
-<text x="1000" y="138" fill="#ff9f0a" font-size="10.5" font-weight="600" text-anchor="middle">Alumni offices</text>
-<text x="1000" y="153" fill="#9a9aa2" font-size="9" text-anchor="middle">Dyson · CALS · Board</text>
-</g>
-<!-- L1 to L2 bus (institutional, verified) -->
-<g stroke="#32d74b" stroke-width="1.5" fill="none">
-<path d="M280 64 V92 H120 V120" marker-end="url(#arr)"/>
-<path d="M280 64 V96 H340 V120" marker-end="url(#arr)"/>
-<path d="M280 64 V100 H560 V120" marker-end="url(#arr)"/>
-<path d="M280 64 V104 H780 V120" marker-end="url(#arr)"/>
-<path d="M280 64 V108 H1000 V120" marker-end="url(#arr)"/>
-</g>
-<!-- L3 firms: 3 rows x 4 cols -->
-<g font-size="10.5">
-<rect x="20" y="210" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="145" y="226" fill="#4da3ff" font-weight="600" text-anchor="middle">Lux Capital</text><text x="145" y="240" fill="#9a9aa2" font-size="9" text-anchor="middle">Wolfe '99 · Hébert '99</text>
-<rect x="290" y="210" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="415" y="226" fill="#4da3ff" font-weight="600" text-anchor="middle">Menlo</text><text x="415" y="240" fill="#9a9aa2" font-size="9" text-anchor="middle">Das '14 · Anthology</text>
-<rect x="560" y="210" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="685" y="226" fill="#4da3ff" font-weight="600" text-anchor="middle">NEA</text><text x="685" y="240" fill="#9a9aa2" font-size="9" text-anchor="middle">Schoen</text>
-<rect x="830" y="210" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="955" y="226" fill="#4da3ff" font-weight="600" text-anchor="middle">Boldstart</text><text x="955" y="240" fill="#9a9aa2" font-size="9" text-anchor="middle">Sim '94</text>
-<rect x="20" y="268" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="145" y="284" fill="#4da3ff" font-weight="600" text-anchor="middle">MaC</text><text x="145" y="298" fill="#9a9aa2" font-size="9" text-anchor="middle">Nichols MBA'11</text>
-<rect x="290" y="268" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="415" y="284" fill="#4da3ff" font-weight="600" text-anchor="middle">Founder Collective</text><text x="415" y="298" fill="#9a9aa2" font-size="9" text-anchor="middle">Rosenbloom '98</text>
-<rect x="560" y="268" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="685" y="284" fill="#4da3ff" font-weight="600" text-anchor="middle">Primary</text><text x="685" y="298" fill="#9a9aa2" font-size="9" text-anchor="middle">Svrluga '93</text>
-<rect x="830" y="268" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="955" y="284" fill="#4da3ff" font-weight="600" text-anchor="middle">FirstMark</text><text x="955" y="298" fill="#9a9aa2" font-size="9" text-anchor="middle">Fleming '17</text>
-<rect x="20" y="326" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="145" y="342" fill="#4da3ff" font-weight="600" text-anchor="middle">645 Ventures</text><text x="145" y="356" fill="#9a9aa2" font-size="9" text-anchor="middle">Holiday MBA'12</text>
-<rect x="290" y="326" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="415" y="342" fill="#4da3ff" font-weight="600" text-anchor="middle">Radical</text><text x="415" y="356" fill="#9a9aa2" font-size="9" text-anchor="middle">Megrue '80</text>
-<rect x="560" y="326" width="250" height="40" rx="7" fill="#111114" stroke="#0071e3"/><text x="685" y="342" fill="#4da3ff" font-weight="600" text-anchor="middle">Neotribe</text><text x="685" y="356" fill="#9a9aa2" font-size="9" text-anchor="middle">Mitchem · Auquan</text>
-<rect x="830" y="326" width="250" height="40" rx="7" fill="#111114" stroke="#6e6e73"/><text x="955" y="342" fill="#b9b9be" font-weight="600" text-anchor="middle">Sequoia</text><text x="955" y="356" fill="#9a9aa2" font-size="9" text-anchor="middle">Leone '79 · long game</text>
-</g>
-<!-- L2 to L3: solid verified -->
-<g stroke="#32d74b" stroke-width="1.5" fill="none">
-<path d="M120 164 V170 H10 V346 H20" marker-end="url(#arr)"/>
-<path d="M340 164 V176 H550 V230 H560" marker-end="url(#arr)"/>
-<path d="M560 164 V170 H280 V288 H290" marker-end="url(#arr)"/>
-<path d="M560 164 V176 H550 V288 H560" marker-end="url(#arr)"/>
-</g>
-<!-- L2 to L3: dashed potential -->
-<g stroke="#6e6e73" stroke-width="1.2" fill="none" stroke-dasharray="5 4">
-<path d="M120 164 V182 H10 V230 H20" marker-end="url(#arr)"/>
-<path d="M120 164 V188 H10 V288 H20" marker-end="url(#arr)"/>
-<path d="M340 164 V182 H280 V230 H290" marker-end="url(#arr)"/>
-<path d="M560 164 V188 H550 V346 H560" marker-end="url(#arr)"/>
-<path d="M560 164 V194 H280 V346 H290" marker-end="url(#arr)"/>
-<path d="M1000 164 V182 H820 V230 H830" marker-end="url(#arr)"/>
-<path d="M1000 164 V188 H820 V288 H830" marker-end="url(#arr)"/>
-<path d="M1000 164 V194 H820 V346 H830" marker-end="url(#arr)"/>
-</g>
-<!-- L4 decision-makers -->
-<g font-size="10.5">
-<rect x="20" y="430" width="170" height="36" rx="7" fill="#161619" stroke="#32d74b"/><text x="105" y="446" fill="#e5e5ea" font-weight="600" text-anchor="middle">Josh Wolfe</text><text x="105" y="460" fill="#9a9aa2" font-size="9" text-anchor="middle">LEAD · Lux</text>
-<rect x="205" y="430" width="170" height="36" rx="7" fill="#161619" stroke="#32d74b"/><text x="290" y="446" fill="#e5e5ea" font-weight="600" text-anchor="middle">Ed Sim</text><text x="290" y="460" fill="#9a9aa2" font-size="9" text-anchor="middle">LEAD · Boldstart</text>
-<rect x="390" y="430" width="170" height="36" rx="7" fill="#161619" stroke="#32d74b"/><text x="475" y="446" fill="#e5e5ea" font-weight="600" text-anchor="middle">Deedy Das</text><text x="475" y="460" fill="#9a9aa2" font-size="9" text-anchor="middle">LEAD · Menlo</text>
-<rect x="575" y="430" width="170" height="36" rx="7" fill="#161619" stroke="#32d74b"/><text x="660" y="446" fill="#e5e5ea" font-weight="600" text-anchor="middle">Andrew Schoen</text><text x="660" y="460" fill="#9a9aa2" font-size="9" text-anchor="middle">DECISION-MAKER · NEA</text>
-<rect x="760" y="430" width="170" height="36" rx="7" fill="#161619" stroke="#32d74b"/><text x="845" y="446" fill="#e5e5ea" font-weight="600" text-anchor="middle">Aaron Holiday</text><text x="845" y="460" fill="#9a9aa2" font-size="9" text-anchor="middle">LEAD · 645</text>
-<rect x="945" y="430" width="170" height="36" rx="7" fill="#161619" stroke="#32d74b"/><text x="1030" y="446" fill="#e5e5ea" font-weight="600" text-anchor="middle">Micah Rosenbloom</text><text x="1030" y="460" fill="#9a9aa2" font-size="9" text-anchor="middle">LEAD · FC</text>
-<rect x="20" y="484" width="170" height="36" rx="7" fill="#161619" stroke="#0071e3"/><text x="105" y="500" fill="#e5e5ea" font-weight="600" text-anchor="middle">Dez Fleming</text><text x="105" y="514" fill="#9a9aa2" font-size="9" text-anchor="middle">INVESTMENT PRO · FirstMark</text>
-<rect x="205" y="484" width="170" height="36" rx="7" fill="#161619" stroke="#32d74b"/><text x="290" y="500" fill="#e5e5ea" font-weight="600" text-anchor="middle">Brad Svrluga</text><text x="290" y="514" fill="#9a9aa2" font-size="9" text-anchor="middle">LEAD · Primary</text>
-<rect x="390" y="484" width="170" height="36" rx="7" fill="#161619" stroke="#32d74b"/><text x="475" y="500" fill="#e5e5ea" font-weight="600" text-anchor="middle">Marlon Nichols</text><text x="475" y="514" fill="#9a9aa2" font-size="9" text-anchor="middle">LEAD · MaC</text>
-<rect x="575" y="484" width="170" height="36" rx="7" fill="#161619" stroke="#ff9f0a"/><text x="660" y="500" fill="#e5e5ea" font-weight="600" text-anchor="middle">Rebecca Mitchem</text><text x="660" y="514" fill="#9a9aa2" font-size="9" text-anchor="middle">OPERATIONAL · Neotribe</text>
-<rect x="760" y="484" width="170" height="36" rx="7" fill="#161619" stroke="#ff9f0a"/><text x="845" y="500" fill="#e5e5ea" font-weight="600" text-anchor="middle">John Megrue</text><text x="845" y="514" fill="#9a9aa2" font-size="9" text-anchor="middle">INFLUENCER · Radical</text>
-<rect x="945" y="484" width="170" height="36" rx="7" fill="#161619" stroke="#6e6e73"/><text x="1030" y="500" fill="#b9b9be" font-weight="600" text-anchor="middle">Doug Leone</text><text x="1030" y="514" fill="#9a9aa2" font-size="9" text-anchor="middle">INFLUENCER · Sequoia</text>
-</g>
-<!-- L3 to L4 -->
-<g stroke="#6e6e73" stroke-width="1.2" fill="none">
-<path d="M145 250 V380 H105 V430" marker-end="url(#arr)"/>
-<path d="M955 250 V386 H290 V430" marker-end="url(#arr)"/>
-<path d="M415 250 V392 H475 V430" marker-end="url(#arr)"/>
-<path d="M685 250 V398 H660 V430" marker-end="url(#arr)"/>
-<path d="M145 366 V404 H845 V430" marker-end="url(#arr)"/>
-<path d="M415 308 V410 H1030 V430" marker-end="url(#arr)"/>
-<path d="M145 308 V396 H475 V484" marker-end="url(#arr)"/>
-<path d="M685 308 V404 H290 V484" marker-end="url(#arr)"/>
-<path d="M955 308 V386 H105 V484" marker-end="url(#arr)"/>
-<path d="M685 366 V398 H660 V484" marker-end="url(#arr)"/>
-<path d="M415 366 V392 H845 V484" marker-end="url(#arr)"/>
-<path d="M955 366 V410 H1030 V484" marker-end="url(#arr)"/>
-</g>
-<!-- L5 portfolio -->
-<g font-size="9.5">
-<rect x="20" y="548" width="200" height="32" rx="7" fill="#161619" stroke="#2a2a30"/><text x="120" y="568" fill="#d6d6db" text-anchor="middle">Sakana AI — Lux</text>
-<rect x="240" y="548" width="200" height="32" rx="7" fill="#161619" stroke="#2a2a30"/><text x="340" y="568" fill="#d6d6db" text-anchor="middle">TensorZero — FirstMark</text>
-<rect x="460" y="548" width="200" height="32" rx="7" fill="#161619" stroke="#2a2a30"/><text x="560" y="568" fill="#d6d6db" text-anchor="middle">Anthology — Menlo</text>
-<rect x="680" y="548" width="200" height="32" rx="7" fill="#161619" stroke="#2a2a30"/><text x="780" y="568" fill="#d6d6db" text-anchor="middle">Auquan — Neotribe</text>
-<rect x="900" y="548" width="200" height="32" rx="7" fill="#161619" stroke="#2a2a30"/><text x="1000" y="568" fill="#d6d6db" text-anchor="middle">Cohere — Radical</text>
-</g>
-<!-- L4 to L5 -->
-<g stroke="#2a2a30" stroke-width="1.4" fill="none">
-<path d="M105 466 V526 H120 V548" marker-end="url(#arr)"/>
-<path d="M475 466 V532 H560 V548" marker-end="url(#arr)"/>
-<path d="M105 520 V532 H340 V548" marker-end="url(#arr)"/>
-<path d="M660 520 V526 H780 V548" marker-end="url(#arr)"/>
-<path d="M845 520 V532 H1000 V548" marker-end="url(#arr)"/>
-</g>
-<g font-size="11">
-<text x="20" y="612" fill="#32d74b">— verified relationship / employment</text>
-<text x="300" y="612" fill="#6e6e73">— — potential / unconfirmed path</text>
-<text x="580" y="612" fill="#ff9f0a">— authority label (influencer / operational / long game)</text>
-</g>
-</svg>
+  <div class="secnum">07 · RELATIONSHIP MAP</div>
+  <h2>Verified access paths — only what we can prove</h2>
+  <div class="tldr"><b>Use this map to choose the first relationship move.</b> It shows only evidence-backed Cornell links. A green line means the Cornell affiliation is verified; a dashed blue line means the outreach step is recommended, not a promised warm introduction.</div>
+  <div class="map-start">
+    <div>
+      <span class="map-kicker">START HERE</span>
+      <strong>Zach Shulman · Cornell Entrepreneurship</strong>
+      <span>Verified network key. Ask for guidance and 2–3 relevant introductions — not capital.</span>
+    </div>
+    <div class="map-start-actions">
+      <a class="contact-action" href="mailto:zjs2@cornell.edu">Email Zach ↗</a>
+      <a class="contact-action" href="https://www.linkedin.com/in/zachshulman" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="map-wrap">
+    <svg viewBox="0 0 1120 424" role="img" aria-labelledby="access-map-title access-map-desc">
+      <title id="access-map-title">Verified Cornell investor access paths</title>
+      <desc id="access-map-desc">Three evidence-backed Cornell access paths lead from Cornell organizations to Andrew Schoen at NEA, Micah Rosenbloom at Founder Collective, and Aaron Holiday at 645 Ventures. Dashed blue arrows show recommended outreach, not confirmed introductions.</desc>
+      <defs>
+        <marker id="access-map-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#32d74b"/></marker>
+        <marker id="access-map-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#4da3ff"/></marker>
+      </defs>
+      <rect width="1120" height="424" fill="#121216"/>
+      <text x="56" y="48" fill="#98989f" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.4">VERIFIED CORNELL DOOR</text>
+      <text x="440" y="48" fill="#98989f" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.4">DECISION-MAKER</text>
+      <text x="800" y="48" fill="#98989f" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.4">FIRST CONVERSATION</text>
+
+      <!-- connectors are drawn first; no crossing and no box penetration -->
+      <path d="M320 120 H432" fill="none" stroke="#32d74b" stroke-width="2" marker-end="url(#access-map-green)"/>
+      <path d="M696 120 H800" fill="none" stroke="#4da3ff" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#access-map-blue)"/>
+      <path d="M320 200 H432" fill="none" stroke="#32d74b" stroke-width="2" marker-end="url(#access-map-green)"/>
+      <path d="M696 200 H800" fill="none" stroke="#4da3ff" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#access-map-blue)"/>
+      <path d="M320 280 H432" fill="none" stroke="#32d74b" stroke-width="2" marker-end="url(#access-map-green)"/>
+      <path d="M696 280 H800" fill="none" stroke="#4da3ff" stroke-width="1.5" stroke-dasharray="6 5" marker-end="url(#access-map-blue)"/>
+
+      <!-- route 1 -->
+      <rect x="56" y="96" width="264" height="48" rx="8" fill="#17171b" stroke="#32d74b"/>
+      <text x="72" y="117" fill="#f5f5f7" font-size="16" font-family="Arial, sans-serif" font-weight="700">Cornell VC Club</text>
+      <text x="72" y="134" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Schoen founded the club</text>
+      <a href="#people" aria-label="Open Andrew Schoen in the people board">
+        <rect x="432" y="96" width="264" height="48" rx="8" fill="#17171b" stroke="#32d74b"/>
+        <text x="448" y="117" fill="#f5f5f7" font-size="16" font-family="Arial, sans-serif" font-weight="700">Andrew Schoen · NEA</text>
+        <text x="448" y="134" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Partner · decision-maker</text>
+      </a>
+      <rect x="800" y="96" width="264" height="48" rx="8" fill="#121b27" stroke="#4da3ff" stroke-dasharray="6 4"/>
+      <text x="816" y="117" fill="#f5f5f7" font-size="15" font-family="Arial, sans-serif" font-weight="700">Relationship-first note</text>
+      <text x="816" y="134" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Lead with the VC Club link</text>
+
+      <!-- route 2 -->
+      <rect x="56" y="176" width="264" height="48" rx="8" fill="#17171b" stroke="#32d74b"/>
+      <text x="72" y="197" fill="#f5f5f7" font-size="16" font-family="Arial, sans-serif" font-weight="700">Cornell Tech Studio</text>
+      <text x="72" y="214" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Rosenbloom teaches here</text>
+      <a href="#people" aria-label="Open Micah Rosenbloom in the people board">
+        <rect x="432" y="176" width="264" height="48" rx="8" fill="#17171b" stroke="#32d74b"/>
+        <text x="448" y="197" fill="#f5f5f7" font-size="16" font-family="Arial, sans-serif" font-weight="700">Micah Rosenbloom · FC</text>
+        <text x="448" y="214" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Managing Partner · lead</text>
+      </a>
+      <rect x="800" y="176" width="264" height="48" rx="8" fill="#121b27" stroke="#4da3ff" stroke-dasharray="6 4"/>
+      <text x="816" y="197" fill="#f5f5f7" font-size="15" font-family="Arial, sans-serif" font-weight="700">Cornell Tech conversation</text>
+      <text x="816" y="214" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Ask for a thesis discussion</text>
+
+      <!-- route 3 -->
+      <rect x="56" y="256" width="264" height="48" rx="8" fill="#17171b" stroke="#32d74b"/>
+      <text x="72" y="277" fill="#f5f5f7" font-size="16" font-family="Arial, sans-serif" font-weight="700">Big Red / Johnson</text>
+      <text x="72" y="294" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Holiday led BRV before 645</text>
+      <a href="#people" aria-label="Open Aaron Holiday in the people board">
+        <rect x="432" y="256" width="264" height="48" rx="8" fill="#17171b" stroke="#32d74b"/>
+        <text x="448" y="277" fill="#f5f5f7" font-size="16" font-family="Arial, sans-serif" font-weight="700">Aaron Holiday · 645</text>
+        <text x="448" y="294" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Co-founder · managing partner</text>
+      </a>
+      <rect x="800" y="256" width="264" height="48" rx="8" fill="#121b27" stroke="#4da3ff" stroke-dasharray="6 4"/>
+      <text x="816" y="277" fill="#f5f5f7" font-size="15" font-family="Arial, sans-serif" font-weight="700">Ask for a fit conversation</text>
+      <text x="816" y="294" fill="#98989f" font-size="12" font-family="Arial, sans-serif">Do not make a cold capital ask</text>
+
+      <line x1="56" y1="344" x2="1064" y2="344" stroke="#2a2a30" stroke-width="1"/>
+      <line x1="56" y1="376" x2="104" y2="376" stroke="#32d74b" stroke-width="2"/>
+      <text x="116" y="380" fill="#98989f" font-size="12" font-family="Arial, sans-serif">verified Cornell affiliation / institutional connection</text>
+      <line x1="640" y1="376" x2="688" y2="376" stroke="#4da3ff" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <text x="700" y="380" fill="#98989f" font-size="12" font-family="Arial, sans-serif">recommended outreach — not a confirmed introduction</text>
+    </svg>
+  </div>
+  <div class="map-potential">
+    <div><span class="b bD">POTENTIAL</span><b> Alumni-office route:</b> Josh Wolfe (Lux), Ed Sim (Boldstart), and Dez Fleming (FirstMark). No named introducer verified.</div>
+    <div><span class="b bD">POTENTIAL</span><b> Cornell Tech route:</b> Brad Svrluga (Primary). Cornell Tech involvement is documented; an introduction is not.</div>
+    <a class="contact-action" href="#people">Open the full Top 10 action board ↗</a>
+  </div>
+  <details class="map-evidence">
+    <summary>Why only these three routes are drawn as verified</summary>
+    <ul>
+      <li><b>Cornell VC Club → Andrew Schoen / NEA:</b> Schoen founded the Cornell VC Club and is a current NEA partner.</li>
+      <li><b>Cornell Tech Studio → Micah Rosenbloom / Founder Collective:</b> Rosenbloom teaches venture capital at Cornell Tech and is a current managing partner.</li>
+      <li><b>Big Red / Johnson → Aaron Holiday / 645:</b> Holiday was Big Red Ventures' first managing director and is now 645's co-founder and managing partner.</li>
+    </ul>
+  </details>
 </section>
 </div>
 <div class="wrap">
